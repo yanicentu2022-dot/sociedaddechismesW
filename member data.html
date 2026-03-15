@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>info de los integrantes</title>
+    <link rel="stylesheet" href="member data.css">
+</head>
+
+
+<body>
+    <!-- Encabezado destacable -->
+    <header class="header">
+        <h1>¡CHISMES DE LOS INTEGRANTES!</h1>
+        <p>Informacion exclusiva que te enseñaran la otra cara de cada personaje de la universidad, junto a su reputacion actual.</p>
+    <nav class="header-buttons">
+      
+      <a href="index.html" class="btn-link">Nuevo Chisme</a>   
+     <a href="newspast.html" class="btn-link">Chismes Pasados</a>
+    <a href="mensaje.html" class="btn-link">Mensajes Tellonym</a>
+   
+
+</nav>
+    </header>
+
+    <!-- Galería de imágenes -->
+    <main class="gallery">
+        <div class="image-container">
+            <img src="george.png" alt="Imagen 1">
+        </div>
+        <div class="image-container">
+            <img src="quackity.png" alt="Imagen 3">
+        </div>
+
+        <div class="image-container">
+            <img src="Empanada.png" alt="Imagen 3">
+        </div>
+
+         <div class="image-container">
+            <img src="willy.png" alt="Imagen 1">
+        </div>
+        <div class="image-container">
+            <img src="vegetta.png" alt="Imagen 2">
+        </div>
+           <div class="image-container">
+            <img src="FOOLISH.png" alt="Imagen 2">
+        </div>
+       
+<div class="image-container">
+            <img src="WILBUR.png" alt="Imagen 2">
+        </div>   
+    
+        <div class="image-container">
+            <img src="CONTER.png" alt="Imagen 1">
+        </div>
+         <div class="image-container">
+            <img src="JAIDEN.png" alt="Imagen 1">
+        </div>
+          <div class="image-container">
+            <img src="spreen amorcito.png" alt="Imagen 1">
+        </div>
+         <div class="image-container">
+            <img src="ROIR.png" alt="Imagen 3">
+        </div>
+        
+         
+         <div class="image-container">
+            <img src="JUANA.png" alt="Imagen 1">
+        </div>
+         <div class="image-container">
+            <img src="LUZU.png" alt="Imagen 1">
+        </div>
+         <div class="image-container">
+            <img src="CELLBIT.png" alt="Imagen 2">
+             </div>  
+
+         <div class="image-container">
+            <img src="aquino.png" alt="Imagen 2">
+        </div>
+         <div class="image-container">
+            <img src="LOCOCHON.png" alt="Imagen 2">
+        </div>   
+       
+        <div class="image-container">
+            <img src="ARI.png" alt="Imagen 2">
+        </div>  
+          <div class="image-container">
+            <img src="RAMON.png" alt="Imagen 1">
+        </div>
+     <div class="image-container">
+            <img src="JSCH.png" alt="Imagen 1">
+        </div>
+      
+          <div class="image-container">
+            <img src="TINA.png" alt="Imagen 1">
+        </div>
+        
+         <div class="image-container">
+            <img src="TILIN.png" alt="Imagen 1">
+        </div>
+          <div class="image-container">
+            <img src="PHILZ.png" alt="Imagen 1">
+        </div>
+        
+        <div class="image-container">
+            <img src="BAGHERA.png" alt="Imagen 2">
+             </div>
+         
+             <div class="image-container">
+            <img src="Juan.png" alt="Imagen 3">
+        </div>
+
+             <div class="image-container">
+            <img src="CHAY.png" alt="Imagen 3">
+             </div>
+         
+            <div class="image-container">
+            <img src="bagi.png" alt="Imagen 3">
+        </div>
+         
+          
+    </main>
+
+    <!-- Pie de página destacable -->
+    <footer class="footer">
+        <p>&copy; Sociedad "Verdades crudas" de la Universidad Paradise W. Todos los derechos reservados.</p>
+    </footer>
+
+<script>
+const images = document.querySelectorAll(".image-container");
+
+images.forEach(container => {
+    container.addEventListener("click", () => {
+
+        if(container.classList.contains("active")){
+            container.classList.remove("active");
+            document.body.classList.remove("image-open");
+        } else {
+            images.forEach(img => img.classList.remove("active"));
+            container.classList.add("active");
+            document.body.classList.add("image-open");
+        }
+
+    });
+});
+</script>
+
+
+
+
+
+<div class="close-btn">&times;</div>
+<div class="arrow left">&#10094;</div>
+<div class="arrow right">&#10095;</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const images = document.querySelectorAll(".image-container");
+const closeBtn = document.querySelector(".close-btn");
+const nextBtn = document.querySelector(".arrow.right");
+const prevBtn = document.querySelector(".arrow.left");
+
+let currentIndex = 0;
+
+function openImage(index){
+    images.forEach(img => img.classList.remove("active"));
+    images[index].classList.add("active");
+    document.body.classList.add("image-open");
+    currentIndex = index;
+}
+
+function closeImage(){
+    images.forEach(img => img.classList.remove("active"));
+    document.body.classList.remove("image-open");
+}
+
+function nextImage(e){
+    if(e) e.stopPropagation();
+    currentIndex++;
+    if(currentIndex >= images.length){
+        currentIndex = 0;
+    }
+    openImage(currentIndex);
+}
+
+function prevImage(e){
+    if(e) e.stopPropagation();
+    currentIndex--;
+    if(currentIndex < 0){
+        currentIndex = images.length - 1;
+    }
+    openImage(currentIndex);
+}
+
+images.forEach((container, index)=>{
+    container.addEventListener("click", function(){
+        openImage(index);
+    });
+});
+
+closeBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    closeImage();
+});
+
+nextBtn.addEventListener("click", nextImage);
+prevBtn.addEventListener("click", prevImage);
+
+});
+</script>
+
+
+</body>
+</html>

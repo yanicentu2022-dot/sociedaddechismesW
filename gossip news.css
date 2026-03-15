@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cuerpo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #e0f0ff 0%, #c0d8f0 100%);
+    color: #1a1a1a;
+}
+
+/* Encabezado */
+.header {
+    background-color: #5b7ea3; /* Azul frío destacable */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Contenedor de los botones dentro del encabezado */
+.header-buttons {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px; /* Separación mínima del párrafo */
+    gap: 20px; /* Espacio entre botones */
+}
+
+/* Estilo de los botones */
+.btn-link {
+    text-decoration: none;
+    padding: 12px 37px;
+    background-color: #7aa7c9; /* Tonalidad fría destacable */
+    color: #f0f8ff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-link:hover {
+    background-color: #517898;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Imagen central */
+.main-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain; /* Importante para que la imagen no se corte */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.02); /* Efecto sutil al pasar el mouse */
+}
+
+/* Pie de página */
+.footer {
+    background-color: #5b7ea3; /* Mismo tono que el encabezado para armonía */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}

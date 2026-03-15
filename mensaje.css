@@ -1,0 +1,104 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CUERPO */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #e7f2fb, #cfdff0);
+    color: #243646;
+}
+
+/* ENCABEZADO */
+.header {
+    background: linear-gradient(135deg, #6fa6c8, #8fbfd8);
+    color: #f5fbff;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 1.15rem;
+}
+
+/* CUERPO / REDIRECCIÓN */
+.redirect {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.redirect p {
+    font-size: 1.1rem;
+    color: #35546d;
+}
+
+/* BOTÓN TELLONYM */
+.tellonym-button {
+    text-decoration: none;
+    background-color: #7fb1cf;
+    color: #ffffff;
+    padding: 15px 37px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tellonym-button:hover {
+    background-color: #6296b6;
+    transform: translateY(-3px);
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    background: linear-gradient(135deg, #6fa6c8, #8fbfd8);
+    color: #f5fbff;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+.header-buttons {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px; /* Separación mínima del párrafo */
+    gap: 20px; /* Espacio entre botones */
+}
+
+/* Estilo de los botones */
+.btn-link {
+    text-decoration: none;
+    padding: 12px 37px;
+    background-color: #6c91ae; /* Tonalidad fría destacable */
+    color: #f0f8ff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-link:hover {
+    background-color: #517898;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

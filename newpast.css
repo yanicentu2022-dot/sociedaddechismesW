@@ -1,0 +1,111 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CUERPO */
+body {
+    background: linear-gradient(180deg, #e6f1fb, #cfe0f3);
+    color: #1e2a35;
+}
+
+/* ENCABEZADO */
+.header {
+    
+    background-color: #5b7ea3; /* Azul frío destacable */
+    color: #f0f8ff;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.15rem;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 50px 30px;
+}
+
+/* TARJETA DE IMAGEN */
+.card {
+    background-color: #f4f9ff;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    height: auto; /* NO se corta */
+    display: block;
+    border-radius: 12px;
+}
+
+/* TÍTULO DEBAJO DE LA IMAGEN */
+.caption {
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #dcecf8;
+    color: #2c4b63;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+    background: linear-gradient(135deg, #6fa3c7, #8fbcd4);
+    color: #f5fbff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+.header-buttons {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px; /* Separación mínima del párrafo */
+    gap: 20px; /* Espacio entre botones */
+}
+
+/* Estilo de los botones */
+.btn-link {
+    text-decoration: none;
+    padding: 12px 37px;
+    background-color: #759ebe; /* Tonalidad fría destacable */
+    color: #f0f8ff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-link:hover {
+    background-color: #517898;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
